@@ -1,0 +1,77 @@
+body {
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    background: linear-gradient(top right, black red);
+}
+
+
+.img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-name: wave;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.error {
+    margin: auto;
+}
+
+#status {
+    font-size: 3.75em;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+
+@keyframes wave {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(30vw, calc(100vh - 100px)) rotate(360deg);
+    }
+
+    40% {
+        transform: translate(60vw, 0);
+    }
+
+    60% {
+        transform: translate(calc(100vw - 100px), 50vh) rotate(360deg);
+    }
+
+    80% {
+        transform: translate(80vw, calc(100vh - 100px));
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather | App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./images/favicon.png">
+</head>
+
+<body>
+    <main>
+        <div class="shade">
+        </div>
+        <header>
+            <nav>
+                <div class="left">
+                    <div class="img-logo">
+                        <img src="./images/weather.png" alt="">
+                    </div>
+                    <div class="title">
+                        <h2>Weather AI</h2>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div class="input-box">
+                        <div class="search-logo" id="search">
+                            <i class="fa-solid fa-magnifying-glass" style="color: inherit;"></i>
+                        </div>
+                        <div class="input">
+                            <input list="places" type="text" placeholder="Search City..." id="place" autofocus>
+                            <datalist id="places">
+                            </datalist>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="time-box">
+                        <h4 id="time"></h4>
+                    </div>
+                    <div class="user" style="" title="Siva">
+                        <a href="https://github.com/Siva611" target="_blank"><img src="./images/1.jpg" alt=""></a>
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+        <div class=" app-body">
+            <div class="aside">
+                <h5>Now</h5>
+                <div class="weather">
+                    <div class="weather-info">
+                        <h1 id="temperature">0</h1><sup>O</sup>
+                        <h1>C</h1>
+                    </div>
+                    <div class="weather-img">
+                        <img id="weather-img" src="./images/weather.png" alt="...">
+                    </div>
+                </div>
+                <p id="description">...</p>
+                <div class="line"></div>
+                <div class="location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3 id="loc-name"></h3>
+                    <h3 id="country"></h3>
+                </div>
+                <div class="location">
+                    <i class="fa-regular fa-clock" style="color: #ffffff;"></i>
+                    <h3 id="loc-time"></h3>
+                </div>
+                <div class="location">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <h3 id="loc-date"></h3>
+                </div>
+            </div>
+            <div class="content-wraper">
+                <h3>Today's Hightlights</h3>
+                <div class="content">
+                    <div class="humidity" title="Wind-Speed">
+                        <p>Wind</p>
+                        <div class="pressure-details">
+                            <i class="fa-solid fa-wind" style="color: #ffffff;"></i>
+                            <div class="meter-box">
+                                <h3 id="wind-speed">0</h3><span>Kmps</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="humidity" title="Humidity">
+                        <p>humidity</p>
+                        <div class="pressure-details">
+                            <i class="fa-solid fa-temperature-low" style="color: #ffffff;"></i>
+                            <div class="meter-box">
+                                <h3 id="humidity">0</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="humidity" title="Pressure">
+                        <p>Pressure</p>
+                        <div class="pressure-details">
+                            <i class="fa-solid fa-water" style="color: #ffffff;"></i>
+                            <div class="meter-box">
+                                <h3 id="pressure">0</h3>
+                                <h4> Bar</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="humidity" title="Visibility">
+                        <p>Visibility</p>
+                        <div class="pressure-details">
+                            <i class="fa-solid fa-eye" style="color: #ffffff;"></i>
+                            <div class="meter-box">
+                                <h3 id="visibility">0</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="humidity" title="Sunrise">
+                        <p>Sunrise</p>
+                        <div class="pressure-details">
+                            <i class="fa-solid fa-sun" style="color: #ffffff;"></i>
+                            <div class="meter-box">
+                                <h3 id="sunrise">0</h3>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="humidity" title="Sunset">
+                        <p>Sunset</p>
+                        <div class="pressure-details">
+                            <i class="fa-solid fa-cloud-moon" style="color: #ffffff;"></i>
+                            <div class="meter-box">
+                                <h3 id="sunset">0</h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="footer">
+                    <h4 id="sep">Copyright @ <span id="year"></span>
+                        <h4 id="sep">|</h4><em>t.sivanagu611@gmail.com</em>
+                    </h4>
+                    <h4 id="sep">|</h4>
+                    <div class="github">
+                        <i class="fa-brands fa-github" style="color: #000000;"></i>
+                        <em>
+                            <h3><a href="https://github.com/Siva611" target="_blank">Git Hub</a></h3>
+                        </em>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Pacifico&family=Poppins:wght@600&family=Quicksand&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+
+a {
+    color: inherit;
+}
+
+body {
+    background-color: #131215;
+}
+
+main {
+    position: relative;
+    background-color: #131215;
+    width: 100%;
+    height: 100vh;
+    min-width: 393px;
+    overflow: hidden;
+    overflow: hidden;
+}
+
+.shade {
+    position: absolute;
+    width: 200vw;
+    height: 200vw;
+    animation-name: fade;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    background: linear-gradient(160deg, rgb(36, 32, 32), orange);
+    /* background-color: aliceblue; */
+
+}
+
+header {
+    height: 65px;
+    width: 100%;
+    z-index: 20;
+}
+
+nav {
+    display: flex;
+    padding: 0 1.5em;
+}
+
+.left,
+.middle,
+.right {
+    z-index: 20;
+    flex: 1;
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    color: white;
+    gap: 1em;
+    justify-content: flex-start;
+}
+
+.left h2 {
+    font-size: 1.5em;
+    font-weight: 900;
+    font-family: 'Dancing Script', cursive;
+    color: orange;
+}
+
+.img-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.img-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+/* left end */
+
+.middle {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-box {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    height: 50px;
+    background-color: #1c1c1e;
+    width: 100%;
+    border-radius: 50px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.search-logo {
+    color: white;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all .3s linear;
+}
+
+.search-logo:hover {
+    color: black;
+    background-color: orange;
+}
+
+
+.input {
+    border-radius: 40px;
+    flex: 1;
+    height: 100%;
+}
+
+input {
+    padding: 0 10px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    width: 100%;
+    height: inherit;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+/* middle end */
+
+.right {
+    gap: 10px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.time-box {
+    height: 40px;
+    background-color: orange;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: all .2s linear;
+}
+
+.user {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border: 3px solid rgb(105, 105, 105);
+    cursor: pointer;
+}
+
+.user img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.app-body {
+    height: calc(100vh - 65px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+
+.aside {
+    z-index: 20;
+    border-radius: 16px;
+    width: 100%;
+    height: 300px;
+    background-color: #1c1c1e;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    padding: 16px 32px;
+    color: white;
+    gap: 10px;
+}
+
+.weather {
+    gap: 20px;
+    display: flex;
+    height: 70px;
+    align-items: center;
+}
+
+.weather-info {
+    display: flex;
+}
+
+.weather-img {
+    width: 60px;
+    height: 60px;
+}
+
+.weather img {
+    width: 100%;
+    height: 100%;
+}
+
+.line {
+    height: 2px;
+    background-color: rgba(240, 248, 255, 0.365);
+    border-radius: 2px;
+    margin-top: 5px;
+}
+
+.location {
+    overflow: hidden;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.content-wraper {
+    z-index: 20;
+    border-radius: 16px;
+    background-color: #1c1c1e;
+    color: white;
+    width: 100%;
+    overflow: hidden;
+    /* padding: 16px; */
+    overflow-y: scroll;
+}
+
+.content-wraper>h3 {
+    color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    padding: 16px 0 16px 16px;
+    background-color: rgb(30, 30, 30);
+    box-shadow: 2px 3px 3px rgb(19, 16, 16);
+}
+
+.content {
+    z-index: 20;
+    background-color: #1c1c1e;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.humidity,
+.pressure {
+    color: orange;
+    background-color: rgb(23, 23, 23);
+    min-height: 150px;
+    max-height: 160px;
+    border-radius: 16px;
+    padding: 1em 2em;
+    min-width: 250px;
+    flex: 1;
+    transition: all .2s linear;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+    cursor: pointer;
+
+}
+
+.humidity:hover {
+    scale: 1.01;
+    box-shadow: 1px 2px 2px #ffa500;
+}
+
+.pressure-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.pressure-details h3 {
+    font-size: 1.3em;
+}
+
+.weather-info {
+    color: #ffa500;
+}
+
+
+.meter-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.meter-box h3,
+h4 {
+    margin: 0;
+}
+
+
+.footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(30, 30, 30);
+    height: 150px;
+    width: 100%;
+    z-index: 20;
+    z-index: 99;
+    box-shadow: 2px 3px 3px rgb(255, 0, 0);
+    background: url(./images/wave.svg);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 16px 0;
+    gap: 10px;
+    color: black;
+}
+
+.github {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.github i {
+    font-size: 1.3em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:600px) {
+    .right {
+        flex: 0;
+        overflow: hidden;
+    }
+
+    .img-logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .left h2 {
+        font-size: 1.2em;
+        font-weight: 900;
+        font-family: 'Dancing Script', cursive;
+        color: orange;
+    }
+
+    .content-wraper {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .humidity,
+    .pressure {
+        flex: 1;
+    }
+
+    .content i {
+        font-size: 1.8em;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 3px;
+        flex-wrap: wrap;
+        padding-bottom: 9px;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .footer h3,
+    h4 {
+        font-size: .8em;
+    }
+
+    #sep {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width:701px) {
+    .app-body {
+        flex-direction: row;
+    }
+
+    .aside {
+        max-width: 250px;
+        height: 100%;
+    }
+
+    .content-wraper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+    .content i {
+        font-size: 3em;
+    }
+}
+
+
+
+@keyframes fade {}
